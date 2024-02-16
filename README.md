@@ -7,7 +7,7 @@ You can always refer to [Git and Repo](https://source.android.com/source/using-r
 as newbie, I will also try to document everything in here.
 
 ### Prerequisites
-- Use Ubuntu or [WSL2](https://github.com/eduardovicente/compilingEvoGsi/edit/main/README.md#using-wsl)
+- Use Ubuntu or [WSL2](https://github.com/eduardovicente/compilingEvoGsi/tree/main#using-wsl)
 - Good laptop (12 cores and 16gb RAM at least) and patience (This is my experience)
 
 ### Using WSL

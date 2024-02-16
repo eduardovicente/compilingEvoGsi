@@ -2,8 +2,23 @@
   <img src="https://avatars.githubusercontent.com/u/66854612?s=200&v=4">
 </p>
 
-### Building
-You'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
+### How to Build?
+You can always refer to [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F)
+as newbie, I will also try to document everything in here.
+
+### Prerequisites
+- Use Ubuntu or [WSL2](https://github.com/eduardovicente/compilingEvoGsi/edit/main/README.md#using-wsl)
+- Good laptop (12 cores and 16gb RAM at least) and patience (This is my experience)
+
+### Using WSL
+1. Open powershell window with Admin privileges.
+2. Run below command.
+```bash
+wsl --install
+```
+3. After done, reboot your laptop
+***Note:*** by default Ubuntu LTS is installed, this is what we need
+
 
 ## Create Directories
 As a first step, you'll have to create and enter a folder with the appropriate name.

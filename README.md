@@ -7,27 +7,7 @@ You can always refer to [Git and Repo](https://source.android.com/source/using-r
 
 As a newbie building GSI ROMS.
 
-1. I will be leaving you my own recap of [How to build a GSI](https://github.com/eduardovicente/blob/main/README.md#Steps-for-begginers)
-2. I will also be recording my [build times](https://github.com/eduardovicente/compilingEvoGsi/blob/main/README.md#using-same-internet-bandwidth-speed---100mbs) for you guys to get an estimate.
-   
-<details>
-  <summary>My experience building, my setup and timings</summary>
-  
-  ## ***Using same internet bandwidth speed - 100mbs***
-  
-  ### Lenovo legion y530 laptop, i7 8th gen, 32gb ram ddr4 (2666mhz), nvme 2.0
-  - Jobs: 16
-  - Repo Sync time : 2:10 hrs
-  - Build time : 5:50 hrs
-    
-  ### Lenovo legion 5 Pro laptop, i7 12th gen, 20gb ram ddr5 (4800mhz), nvme 3.0
-  - Jobs: 20
-  - Repo Sync time : 2:10 hrs
-  - Build time : 2:05 hrs
-    
-</details>
-  
-I also did a guide by myself, if you want to have a look you can try it out!
+1. I will be leaving you my own recap of [How to build a GSI]
 <details>
   <summary>Beginners guide</summary>
  Hello everyone, this is a remake of all the guides out there.
@@ -131,7 +111,28 @@ export CCACHE_COMPRESS=1
 export CCACHE_MAXSIZE=50G # 50 GB
 ```
 </details>
+   
+2. I will also be recording my [build times](https://github.com/eduardovicente/compilingEvoGsi/blob/main/README.md#using-same-internet-bandwidth-speed---100mbs) for you guys to get an estimate.
+   
+<details>
+  <summary>My experience building, my setup and timings</summary>
+  
+  ## ***Using same internet bandwidth speed - 100mbs***
+  
+  ### Lenovo legion y530 laptop, i7 8th gen, 32gb ram ddr4 (2666mhz), nvme 2.0
+  - Jobs: 16
+  - Repo Sync time : 2:10 hrs
+  - Build time : 5:50 hrs
+    
+  ### Lenovo legion 5 Pro laptop, i7 12th gen, 20gb ram ddr5 (4800mhz), nvme 3.0
+  - Jobs: 20
+  - Repo Sync time : 2:10 hrs
+  - Build time : 2:05 hrs
+    
+</details>
 
+
+### Once you did above / have your setup prepared
 
 ## Create Directories
 As a first step, you'll have to create and enter a folder with the appropriate name.
@@ -174,7 +175,9 @@ patches/apply-patches.sh . vicente
 ```
 
 ### ***If you're just building a GSI***
-Clone this repository and then copy evo.mk to device/phh/treble in the ROM folder. Then run the following commands:
+Clone this repository and then copy evo.mk to device/phh/treble in the ROM folder. 
+
+### Then run the following commands:
 ```bash
  cd device/phh/treble
  bash generate.sh evo

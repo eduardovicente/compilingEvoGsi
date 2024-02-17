@@ -7,7 +7,7 @@ You can always refer to [Git and Repo](https://source.android.com/source/using-r
 
 As a newbie building GSI ROMS.
 
-1. I will be leaving you my own recap of [How to build a GSI]
+1. I will be leaving you my own recap of [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
 <details>
   <summary>Beginners guide</summary>
 

@@ -1,0 +1,78 @@
+From 4ff766d2de76cddb2ca12008355f5181612e2e52 Mon Sep 17 00:00:00 2001
+From: vicente <eduardo.vicente@outlook.es>
+Date: Fri, 16 Feb 2024 12:15:08 -0600
+Subject: [PATCH] adding support for legion y700 on gsi evo rom
+
+---
+ evo.mk                        | 24 ++++++++++++++++++++++++
+ files/legiony700-gpio-keys.kl |  5 +++++
+ rw-system.sh                  |  9 +++++++++
+ 3 files changed, 38 insertions(+)
+ create mode 100644 evo.mk
+ create mode 100644 files/legiony700-gpio-keys.kl
+
+diff --git a/evo.mk b/evo.mk
+new file mode 100644
+index 0000000..f77a779
+--- /dev/null
++++ b/evo.mk
+@@ -0,0 +1,24 @@
++$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
++$(call inherit-product, vendor/evolution/config/common_full_tablet_wifionly.mk)
++$(call inherit-product, vendor/evolution/config/BoardConfigSoong.mk)
++$(call inherit-product, device/evolution/sepolicy/common/sepolicy.mk)
++-include vendor/evolution/build/core/config.mk
++
++TARGET_NO_KERNEL_OVERRIDE := true
++
++TARGET_NO_KERNEL_IMAGE := true
++
++SELINUX_IGNORE_NEVERALLOWS := true
++
++TARGET_BOOT_ANIMATION_RES := 1080
++
++TARGET_SUPPORTS_QUICK_TAP := true
++
++PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
++    ro.system.ota.json_url=https://raw.githubusercontent.com/ahnet-69/treble_evo/udc/ota.json
++
++PRODUCT_PACKAGES += \
++    GCamGOPrebuilt-V3
++
++DEVICE_PACKAGE_OVERLAYS += \
++    $(LOCAL_PATH)/overlay-evolution
+diff --git a/files/legiony700-gpio-keys.kl b/files/legiony700-gpio-keys.kl
+new file mode 100644
+index 0000000..ffba499
+--- /dev/null
++++ b/files/legiony700-gpio-keys.kl
+@@ -0,0 +1,5 @@
++key 115   VOLUME_UP
++key 114   VOLUME_DOWN
++key 102   HOME
++key 528   FOCUS
++key 766   CAMERA
+\ No newline at end of file
+diff --git a/rw-system.sh b/rw-system.sh
+index 755d4f0..8bed503 100644
+--- a/rw-system.sh
++++ b/rw-system.sh
+@@ -234,6 +234,15 @@ changeKeylayout() {
+         changed=true
+     fi
+ 
++    #Legion y700 double tap starts
++    if getprop ro.vendor.build.fingerprint | grep -iq 'Lenovo/TB-9707F'; then
++        echo 1 > /proc/gesture_control
++        cp /system/phh/legiony700-gpio-keys.kl /mnt/phh/keylayout/gpio-keys.kl
++        chmod 0644 /mnt/phh/keylayout/gpio-keys.kl
++        changed=true
++    fi
++    #Legion y700 double tap ends
++
+     if ( getprop ro.build.overlay.deviceid |grep -q -e RMX1931 -e RMX1941 -e CPH1859 -e CPH1861 -e RMX2185) ||
+ 	    ( grep -q OnePlus /odm/etc/$(getprop ro.boot.prjname)/*.prop);then
+ 	echo 1 > /proc/touchpanel/double_tap_enable
+-- 
+2.34.1
+

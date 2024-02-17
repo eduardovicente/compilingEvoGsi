@@ -10,7 +10,6 @@ As a newbie building GSI ROMS.
 1. I will be leaving you my own recap of [How to build a GSI]
 <details>
   <summary>Beginners guide</summary>
- Hello everyone, this is a remake of all the guides out there.
 
 ### Prerequisites
 - Use Ubuntu or [WSL2](https://github.com/eduardovicente/compilingEvoGsi/tree/main#using-wsl)

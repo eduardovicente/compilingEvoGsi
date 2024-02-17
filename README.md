@@ -129,7 +129,7 @@ repo init -u https://github.com/Evolution-X/manifest -b udc
 ## Clone the Manifest
 This adds necessary dependencies for the Evolution-X GSI.
 ```bash
-git clone https://github.com/ahnet-69/treble_manifest.git -b evo-udc .repo/local_manifests
+git clone https://github.com/eduardovicente/treble_manifest.git -b evo-udc .repo/local_manifests
 ```
 
 ## Sync the repository
@@ -142,7 +142,6 @@ Copy the patches folder to the ROM folder, and run this in the ROM folder:
 ```bash
 patches/apply-patches.sh . trebledroid
 ```
-
 Repeat the command for personal, ponces in the patches folder in the order. (e.g. personal then ponces) by replacing trebledroid with the folder name.
 
 #### NOTE: It is recommended to apply patches manually by going to the respective directory of the patches, and applying them by using `git am`, as the script often skips applying critical patches for some reason.

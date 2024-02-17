@@ -7,8 +7,8 @@ You can always refer to [Git and Repo](https://source.android.com/source/using-r
 
 As a newbie building GSI ROMS.
 
-1. I will be leaving you my own recap of [How to build a GSI](https://github.com/eduardovicente/compilingEvoGsi/tree/main#Steps-for-begginers)
-2. I will also be recording my [build times](https://github.com/eduardovicente/compilingEvoGsi/tree/main#Steps-for-begginers) for you guys to get an estimate.
+1. I will be leaving you my own recap of [How to build a GSI](https://github.com/eduardovicente/blob/main/README.md#Steps-for-begginers)
+2. I will also be recording my [build times](https://github.com/eduardovicente/compilingEvoGsi/blob/main/README.md#using-same-internet-bandwidth-speed---100mbs) for you guys to get an estimate.
    
 <details>
   <summary>My experience building, my setup and timings</summary>

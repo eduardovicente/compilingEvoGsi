@@ -141,12 +141,17 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 Copy the patches folder to the ROM folder, and run this in the ROM folder:
 ```bash
 patches/apply-patches.sh . trebledroid
+patches/apply-patches.sh . personal
+patches/apply-patches.sh . ponces
 ```
-Repeat the command for personal, ponces in the patches folder in the order. (e.g. personal then ponces) by replacing trebledroid with the folder name.
-
 #### NOTE: It is recommended to apply patches manually by going to the respective directory of the patches, and applying them by using `git am`, as the script often skips applying critical patches for some reason.
 
-## Adapting for Evolution-X
+### ***If you came from Legion y700 2022 forum, apply below one as well.***
+```bash
+patches/apply-patches.sh . vicente
+```
+
+### ***If you're just building a GSI***
 Clone this repository and then copy evo.mk to device/phh/treble in the ROM folder. Then run the following commands:
 ```bash
  cd device/phh/treble
@@ -167,11 +172,8 @@ In the ROM folder, run this to start compilation:
 
 ```bash
 source build/envsetup.sh
-
 ccache -M 50G -F 0
-
 lunch treble_arm64_bgN-userdebug 
-
 make systemimage -j$(nproc --all)
 ```
 
@@ -187,10 +189,10 @@ xz -9 -T0 -v -z system.img
 
 ## Troubleshooting
 If you face any conflicts while applying patches, apply the patch manually.
-For any other issues, report them via the [Issues](https://github.com/ahnet-69/treble_evo/issues) tab.
 
 ## Credits
 These people have helped this project in some way or another, so they should be the ones who receive all the credit:
+- [Ahnet](https://github.com/ahnet-69) ***Was the only one open to resolve questions! huge thank you!***
 - [Evolution-X Team](https://github.com/Evolution-X)
 - [Phhusson](https://github.com/phhusson)
 - [AndyYan](https://github.com/AndyCGYan)

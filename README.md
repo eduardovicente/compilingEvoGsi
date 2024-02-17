@@ -3,9 +3,30 @@
 </p>
 
 ### How to Build?
-You can always refer to [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F)
-as newbie, 
+You can always refer to [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
 
+As a newbie building GSI ROMS.
+
+1. I will be leaving you my own recap of [How to build a GSI](https://github.com/eduardovicente/compilingEvoGsi/tree/main#Steps-for-begginers)
+2. I will also be recording my [build times](https://github.com/eduardovicente/compilingEvoGsi/tree/main#Steps-for-begginers) for you guys to get an estimate.
+   
+<details>
+  <summary>My experience building, my setup and timings</summary>
+  
+  ***Using same internet bandwidth speed - 100mbs***
+  
+  ## Lenovo legion y530 laptop, i7 8th gen, 32gb ram ddr4 (2666mhz), nvme 2.0
+  - Jobs: 16
+  - Repo Sync time : 2:10 hrs
+  - Build time : 5:50 hrs
+    
+  ## Lenovo legion 5 Pro laptop, i7 12th gen, 20gb ram ddr5 (4800mhz), nvme 3.0
+  - Jobs: 20
+  - Repo Sync time : 2:10 hrs
+  - Build time : 2:05 hrs
+    
+</details>
+  
 I also did a guide by myself, if you want to have a look you can try it out!
 <details>
   <summary>Beginners guide</summary>
@@ -136,6 +157,7 @@ git clone https://github.com/eduardovicente/treble_manifest.git -b evo-udc .repo
 ```bash
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
+If you see any issue here let it do his work, after its done, run it again, you should get no errors
 
 ### Apply the patches
 Copy the patches folder to the ROM folder, and run this in the ROM folder:

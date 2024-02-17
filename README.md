@@ -13,14 +13,14 @@ As a newbie building GSI ROMS.
 <details>
   <summary>My experience building, my setup and timings</summary>
   
-  ***Using same internet bandwidth speed - 100mbs***
+  ## ***Using same internet bandwidth speed - 100mbs***
   
-  ## Lenovo legion y530 laptop, i7 8th gen, 32gb ram ddr4 (2666mhz), nvme 2.0
+  ### Lenovo legion y530 laptop, i7 8th gen, 32gb ram ddr4 (2666mhz), nvme 2.0
   - Jobs: 16
   - Repo Sync time : 2:10 hrs
   - Build time : 5:50 hrs
     
-  ## Lenovo legion 5 Pro laptop, i7 12th gen, 20gb ram ddr5 (4800mhz), nvme 3.0
+  ### Lenovo legion 5 Pro laptop, i7 12th gen, 20gb ram ddr5 (4800mhz), nvme 3.0
   - Jobs: 20
   - Repo Sync time : 2:10 hrs
   - Build time : 2:05 hrs

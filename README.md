@@ -111,7 +111,7 @@ export CCACHE_MAXSIZE=50G # 50 GB
 ```
 </details>
    
-2. I will also be recording my [build times](https://github.com/eduardovicente/compilingEvoGsi/blob/main/README.md#using-same-internet-bandwidth-speed---100mbs) for you guys to get an estimate.
+2. I will also be recording my build times for you guys to get an estimate.
    
 <details>
   <summary>My experience building, my setup and timings</summary>

@@ -33,7 +33,7 @@ wsl --install
 ## Steps for begginers
 ### 0. Before you start, update and upgrade your ubuntu/ubuntu wsl
 ```bash
- sudo apt update && apt upgrade
+sudo apt update -y && sudo apt upgrade -y
 ```
 
 ### 1. Install SDK

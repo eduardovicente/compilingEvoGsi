@@ -160,8 +160,9 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 If you see any issue here let it do his work, after its done, run it again, you should get no errors
 
 ### Apply the patches
-Copy the patches folder to the ROM folder, and run this in the ROM folder:
+Copy the patches folder to the ROM folder, and run this *in the ROM folder*:
 ```bash
+chmod +x patches/apply-patches.sh
 patches/apply-patches.sh . trebledroid
 patches/apply-patches.sh . personal
 patches/apply-patches.sh . ponces

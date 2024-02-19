@@ -33,7 +33,7 @@ wsl --install
 ## Steps for begginers
 ### 0. Before you start, update and upgrade your ubuntu/ubuntu wsl
 ```bash
- sudo apt update && apt upgrade
+sudo apt update -y && sudo apt upgrade -y
 ```
 
 ### 1. Install SDK
@@ -160,20 +160,21 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 If you see any issue here let it do his work, after its done, run it again, you should get no errors
 
 ### Apply the patches
-Copy the patches folder to the ROM folder, and run this in the ROM folder:
+Copy the patches folder to the ROM folder, and run this *in the ROM folder*:
 ```bash
+chmod +x patches/apply-patches.sh
 patches/apply-patches.sh . trebledroid
 patches/apply-patches.sh . personal
 patches/apply-patches.sh . ponces
 ```
 #### NOTE: It is recommended to apply patches manually by going to the respective directory of the patches, and applying them by using `git am`, as the script often skips applying critical patches for some reason.
 
-### ***If you came from Legion y700 2022 forum, apply below one as well.***
+  #### ***If you came from Legion y700 2022 forum, apply below one as well.***
 ```bash
 patches/apply-patches.sh . vicente
 ```
 
-### ***If you're just building a GSI***
+  #### ***If you're just building a GSI***
 Clone this repository and then copy evo.mk to device/phh/treble in the ROM folder. 
 
 ### Then run the following commands:

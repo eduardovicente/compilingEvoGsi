@@ -3,66 +3,13 @@ From: ahnet-69 <syedmusicrealise@gmail.com>
 Date: Sun, 12 Nov 2023 14:00:44 +0500
 Subject: [PATCH] Remove PlayAutoInstallConfig
 
-This is shipped with OEM skins and is used to install bloatware from the playstore after setup. I am not even sure why Evolution-X ships it but remove it.
 ---
- gms_full.mk                                   |   1 -
- gms_full_tablet_wifionly.mk                   |   1 -
- gms_mini.mk                                   |   1 -
- gms_pico.mk                                   |   1 -
  .../apps/PlayAutoInstallConfig/Android.mk     |  30 ------------------
  .../PlayAutoInstallConfig.apk                 | Bin 16861 -> 0 bytes
- 6 files changed, 34 deletions(-)
+ 2 files changed, 30 deletions(-)
  delete mode 100644 product/packages/apps/PlayAutoInstallConfig/Android.mk
  delete mode 100644 product/packages/apps/PlayAutoInstallConfig/PlayAutoInstallConfig.apk
 
-diff --git a/gms_full.mk b/gms_full.mk
-index 91ba51d..e555a75 100644
---- a/gms_full.mk
-+++ b/gms_full.mk
-@@ -41,7 +41,6 @@ PRODUCT_PACKAGES += \
-     PixelThemesStub \
-     PixelThemesStub2022_and_newer \
-     PixelWallpapers2023 \
--    PlayAutoInstallConfig \
-     PrebuiltBugle \
-     PrebuiltDeskClockGoogle \
-     PrebuiltGmail \
-diff --git a/gms_full_tablet_wifionly.mk b/gms_full_tablet_wifionly.mk
-index 1a773bf..7cebfb6 100644
---- a/gms_full_tablet_wifionly.mk
-+++ b/gms_full_tablet_wifionly.mk
-@@ -42,7 +42,6 @@ PRODUCT_PACKAGES += \
-     PixelThemesStub \
-     PixelThemesStub2022_and_newer \
-     PixelWallpapers2023Tablet \
--    PlayAutoInstallConfig \
-     PlayBooksPrebuilt \
-     PrebuiltDeskClockGoogle \
-     PrebuiltGmail \
-diff --git a/gms_mini.mk b/gms_mini.mk
-index b991969..507f010 100644
---- a/gms_mini.mk
-+++ b/gms_mini.mk
-@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
-     MarkupGoogle \
-     PixelThemesStub \
-     PixelThemesStub2022_and_newer \
--    PlayAutoInstallConfig \
-     PrebuiltBugle \
-     PrebuiltDeskClockGoogle \
-     SoundPickerPrebuilt \
-diff --git a/gms_pico.mk b/gms_pico.mk
-index 0d7a1a1..38e8b87 100644
---- a/gms_pico.mk
-+++ b/gms_pico.mk
-@@ -34,7 +34,6 @@ PRODUCT_PACKAGES += \
-     MarkupGoogle \
-     PixelThemesStub \
-     PixelThemesStub2022_and_newer \
--    PlayAutoInstallConfig \
-     PrebuiltDeskClockGoogle \
-     PrebuiltBugle \
-     SoundPickerPrebuilt \
 diff --git a/product/packages/apps/PlayAutoInstallConfig/Android.mk b/product/packages/apps/PlayAutoInstallConfig/Android.mk
 deleted file mode 100644
 index fe1fd90..0000000
